@@ -10,7 +10,7 @@ namespace HangmanProjektArbete
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("hej");
+            Console.WriteLine("hej, hejdå!");
         }
     }
 }
