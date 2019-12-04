@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace HangmanProjektArbete
 {
-    class Program
+    class HighScore
     {
-        static void Main(string[] args)
-        {
-            Menu.StartMenu();
-        }
+        //Array med highscore som synkas med en .txt fil
     }
 }

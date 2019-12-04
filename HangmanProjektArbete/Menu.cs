@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace HangmanProjektArbete
 {
-    class Program
+    class Menu
     {
-        static void Main(string[] args)
+        //Startmenu
+        public static void StartMenu()
         {
-            Menu.StartMenu();
+
         }
     }
 }

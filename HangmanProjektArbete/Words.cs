@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace HangmanProjektArbete
 {
-    class Program
+    class Words
     {
-        static void Main(string[] args)
-        {
-            Menu.StartMenu();
-        }
+        //Ska läsa in filen med ord .txt
+
+
     }
 }

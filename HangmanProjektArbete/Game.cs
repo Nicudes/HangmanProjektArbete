@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace HangmanProjektArbete
 {
-    class Program
+    class Game
     {
-        static void Main(string[] args)
-        {
-            Menu.StartMenu();
-        }
+        //Hanterar gissningar o sånt. 
+        //list med incorrect guesses
+        //list med correct guesses
+
     }
 }
