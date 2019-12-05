@@ -32,6 +32,7 @@ namespace HangmanProjektArbete
           
             do
             {
+                Console.WriteLine(correctWord);
                 Console.Clear();
                 Console.WriteLine($"               The Hangman Game      HP: {life}                           ");
                 Console.WriteLine("-------------------------------------------------                   ");
@@ -48,7 +49,6 @@ namespace HangmanProjektArbete
                 Console.WriteLine("|                                               |                   ");
                 Console.WriteLine("|              _ _ _ _ _ _ _ _                  |                   ");
                 Console.WriteLine("-------------------------------------------------                   ");
-             
                 Console.WriteLine("                  Used letters                                      ");
 
                 foreach (var item in usedLetters)

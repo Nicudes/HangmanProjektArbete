@@ -27,10 +27,11 @@ namespace HangmanProjektArbete
             switch (mainMenu)
             {
                 case "1":
+                    Game.GameStart();
                     break;
 
                 case "2":
-                    HighScore.HighScoreList();
+                   // HighScore.HighScoreList();
                     break;
 
                 case "3":
