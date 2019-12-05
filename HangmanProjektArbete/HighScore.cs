@@ -9,5 +9,6 @@ namespace HangmanProjektArbete
     class HighScore
     {
         //Array med highscore som synkas med en .txt fil
+       
     }
 }
