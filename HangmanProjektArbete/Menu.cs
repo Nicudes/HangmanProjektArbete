@@ -31,7 +31,9 @@ namespace HangmanProjektArbete
                     break;
 
                 case "2":
-                   // HighScore.HighScoreList();
+                    HighScore.StoreHighScore();
+                    Console.WriteLine("Success");
+                    Console.ReadKey();
                     break;
 
                 case "3":
