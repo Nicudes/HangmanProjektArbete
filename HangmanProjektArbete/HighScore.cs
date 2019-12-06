@@ -1,31 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.IO;
-using ControlzEx.Standard;
+using System.Collections;
+using System.Windows.Documents;
 
 namespace HangmanProjektArbete
 {
     public class HighScore
     {
-        //Array med highscore som synkas med en .txt fil
-        public const string pathHighScore = @"HighScore.txt";
-        //public const string temp = @"C:\Users\danie\Documents\#Testning\Projektarbete\HangmanProjektArbete\HangmanProjektArbete\HangmanProjektArbete\HighScore.txt";
+        public const string pathHS = @"C:\Users\danie\Documents\#Testning\Projektarbete\HangmanProjektArbete\HangmanProjektArbete\HangmanProjektArbete\HighScore.txt";
 
         public static void StoreHighScore()
         {
+
             Console.WriteLine("Enter your name for the High Score List!!");
             string nameForHighScore = Console.ReadLine();
 
+            File.WriteAllText(pathHS, nameForHighScore);
 
+            File.OpenText(pathHS);
 
-            using (StreamWriter sw = File.CreateText(pathHighScore))
-            {
-                sw.WriteLine(nameForHighScore);
-            }
-
+            Console.WriteLine("Namnet borde vara adderat");
+            
             //return nameForHighScore;
-        
+
         }
     }
 }
