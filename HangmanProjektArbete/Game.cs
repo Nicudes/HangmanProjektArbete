@@ -60,11 +60,13 @@ namespace HangmanProjektArbete
                 Console.WriteLine("-------------------------------------------------                   ");
                 Console.WriteLine("                 Guess a letter                                       ");
 
+            
+                    guessedLetter = Console.ReadLine().ToUpper();
 
-                guessedLetter = Console.ReadLine().ToUpper();
-        
+                              Console.WriteLine("Wrong input, only one letter is allowed.");
+                   
 
-                if (correctInput = Regex.IsMatch(guessedLetter, @"^[a-zA-Z]+$"))
+                if (correctInput = Regex.IsMatch(guessedLetter, @"^[a-zA-Z]+$") && guessedLetter.Count() == 1)
                 {
                     correctInput = true;
                 }
