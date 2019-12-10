@@ -24,8 +24,7 @@ namespace HangmanProjektArbete
 
             string wordToCrack = wordList[indexwordList];
 
-            Console.WriteLine("Randoom ord ^^  -->  " + wordList[indexwordList]);
-            Console.ReadKey();
+           
 
             //foreach (string words in wordList)
             //{
