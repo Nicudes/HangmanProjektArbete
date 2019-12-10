@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace HangmanProjektArbete
 {
-    class Menu
+    public class Menu
     {
         //Startmenu
-        public static void StartMenu()
+        public static void StartMenu(string mainMenu)
         {
             Game game = new Game();
             game.life = 3;
@@ -25,7 +25,7 @@ namespace HangmanProjektArbete
             Console.WriteLine("    ##  4. Quit        ##");
             Console.WriteLine("                    ");
                 Console.Write("      Input: ");
-            string mainMenu = Console.ReadLine();
+            mainMenu = Console.ReadLine();
 
             switch (mainMenu)
             {
