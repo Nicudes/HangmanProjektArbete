@@ -11,6 +11,9 @@ namespace HangmanProjektArbete
         //Startmenu
         public static void StartMenu()
         {
+            Game game = new Game();
+            game.life = 3;
+
             Console.Clear();
             Console.WriteLine("      Welcome to Hangman!");
             Console.WriteLine("  made by Daniel, Huy & Jonatan! \n \n");
@@ -27,7 +30,7 @@ namespace HangmanProjektArbete
             switch (mainMenu)
             {
                 case "1":
-                    Game.GameStart();
+                    game.GameStart();
                     break;
 
                 case "2":
