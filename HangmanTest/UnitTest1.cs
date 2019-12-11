@@ -55,12 +55,11 @@ namespace HangmanTest
         [Test]
         public void InsertGuessToWord_GivenValidGuess_ReturnTrue()
         {
-            Game game = new Game();
 
-            game.guessedLetter = "H";
-            game.correctWord = "HEJSAN";
+            Game.guessedLetter = "H";
+            Game.correctWord = "HEJSAN";
 
-            bool result = game.correctWord.Contains(game.guessedLetter);
+            bool result = Game.correctWord.Contains(Game.guessedLetter);
 
             Assert.True(result);
         }
@@ -68,12 +67,11 @@ namespace HangmanTest
         [Test]
         public void InsertGuessToWord_GivenInvalidGuess_ReturnFalse()
         {
-            Game game = new Game();
 
-            game.guessedLetter = "P";
-            game.correctWord = "HEJSAN";
+            Game.guessedLetter = "P";
+            Game.correctWord = "HEJSAN";
 
-            bool result = game.correctWord.Contains(game.guessedLetter);
+            bool result = Game.correctWord.Contains(Game.guessedLetter);
 
             Assert.False(result);
         }

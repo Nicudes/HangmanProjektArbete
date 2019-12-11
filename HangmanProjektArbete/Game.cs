@@ -11,14 +11,13 @@ namespace HangmanProjektArbete
     public class Game
     {
         Random random = new Random(); //  använder oss av randomFunction
-        public int life = 3;
+        public static int life = 3;
         public bool correctInput = false;
-        public string guessedLetter; // Guess är det vi skriver in för att gissa på ordet
-        public string correctWord = Words.WordsFromText().ToUpper(); // det rätta ordet som vi tar in från en txt-fil
-        //public string trueGuessBuild;
+        public static string guessedLetter; // Guess är det vi skriver in för att gissa på ordet
+        public static string correctWord = Words.WordsFromText().ToUpper(); // det rätta ordet som vi tar in från en txt-fil
         public int revealedLetters = 0; // antalet bokstäver som skrivs ut 
-        List<string> usedLetters = new List<string>();
-        StringBuilder displayString;
+        public static List<string> usedLetters = new List<string>();
+        public static StringBuilder displayString;
 
         public bool checkIfWin()
         {
@@ -45,158 +44,6 @@ namespace HangmanProjektArbete
                 return true;
             }
             return false;
-        }
-        public void hangedMan()
-        {
-            Console.WriteLine(correctWord);
-            Console.Clear();
-            if (life == 5)
-            {
-                Console.WriteLine($"               The Hangman Game      HP: {life}                           ");
-                Console.WriteLine("-------------------------------------------------                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                //Console.WriteLine("           " + trueGuessBuild + "              ");
-
-                Console.WriteLine("-------------------------------------------------                   ");
-                Console.WriteLine("                  Used letters                                      ");
-
-            }
-            if (life == 4)
-            {
-                Console.WriteLine($"               The Hangman Game      HP: {life}                           ");
-                Console.WriteLine("-------------------------------------------------                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                     |                         |                   ");
-                Console.WriteLine("|                     |                         |                   ");
-                Console.WriteLine("|                     |                         |                   ");
-                Console.WriteLine("|                     |                         |                   ");
-                Console.WriteLine("|             ________|_______                  |                   ");
-                Console.WriteLine("|                                               |                   ");
-                //Console.WriteLine("           " + trueGuessBuild + "              ");
-
-
-
-                Console.WriteLine("-------------------------------------------------                   ");
-                Console.WriteLine("                  Used letters                                      ");
-
-            }
-            if (life == 3)
-            {
-                Console.WriteLine($"               The Hangman Game      HP: {life}                           ");
-                Console.WriteLine("-------------------------------------------------                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                      ____________             |                   ");
-                Console.WriteLine("|                     |                         |                   ");
-                Console.WriteLine("|                     |                         |                   ");
-                Console.WriteLine("|                     |                         |                   ");
-                Console.WriteLine("|                     |                         |                   ");
-                Console.WriteLine("|             ________|_______                  |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("           " +displayString + "              ");
-
-
-
-                Console.WriteLine("-------------------------------------------------                   ");
-                Console.WriteLine("                  Used letters                                      ");
-            }
-            if (life == 2)
-            {
-                Console.WriteLine($"               The Hangman Game      HP: {life}                           ");
-                Console.WriteLine("-------------------------------------------------                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                      ____________             |                   ");
-                Console.WriteLine("|                     |           o             |                   ");
-                Console.WriteLine(@"|                     |          /O\            |                   ");
-                Console.WriteLine("|                     |                         |                   ");
-                Console.WriteLine("|                     |                         |                   ");
-                Console.WriteLine("|             ________|_______                  |                   ");
-                Console.WriteLine("|                                               |                   ");
-                //Console.WriteLine("           " + trueGuessBuild + "              ");
-                Console.WriteLine("           " + displayString + "              ");
-
-
-
-                Console.WriteLine("-------------------------------------------------                   ");
-                Console.WriteLine("                  Used letters                                      ");
-
-            }
-            if (life == 1)
-            {
-                Console.WriteLine($"               The Hangman Game      HP: {life}                           ");
-                Console.WriteLine("-------------------------------------------------                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                      ____________             |                   ");
-                Console.WriteLine("|                     |           o             |                   ");
-                Console.WriteLine(@"|                     |          /O\            |                   ");
-                Console.WriteLine(@"|                     |           |             |                   ");
-                Console.WriteLine("|                     |                         |                   ");
-                Console.WriteLine("|             ________|_______                  |                   ");
-                Console.WriteLine("|                                               |                   ");
-                //Console.WriteLine("           " + trueGuessBuild + "              ");
-
-
-
-                Console.WriteLine("-------------------------------------------------                   ");
-                Console.WriteLine("                  Used letters                                      ");
-            }
-            if (life == 0)
-            {
-                Console.WriteLine($"               The Hangman Game      HP: {life}                           ");
-                Console.WriteLine("-------------------------------------------------                   ");
-                Console.WriteLine("|                 RIP                           |                   ");
-                Console.WriteLine("|            U DED OK?                          |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("|                      ____________             |                   ");
-                Console.WriteLine("|                     |           o             |                   ");
-                Console.WriteLine(@"|                     |          /O\            |                   ");
-                Console.WriteLine(@"|                     |          /|\            |                   ");
-                Console.WriteLine("|                     |                         |                   ");
-                Console.WriteLine("|             ________|_______                  |                   ");
-                Console.WriteLine("|                                               |                   ");
-                //Console.WriteLine("              " + trueGuessBuild + "              ");
-
-
-                Console.WriteLine("-------------------------------------------------                   ");
-                Console.WriteLine("                  Used letters                                      ");
-            }
-            foreach (var item in usedLetters)
-            {
-                Console.Write(item + ", ");
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("-------------------------------------------------                   ");
-            Console.WriteLine("                 Guess a letter                                       ");
-
-            Console.WriteLine(correctWord);
-    
-            guessedLetter = Console.ReadLine().ToUpper();
-
-
         }
 
         public void wordDisplayHandle()
@@ -278,7 +125,7 @@ namespace HangmanProjektArbete
 
                 checkIfDead();
                 checkIfWin();
-                hangedMan();
+                TextHandler.hangedMan();
                 InsertGuessToWord();
                 ValidInput();
                 validGuess();
