@@ -12,7 +12,7 @@ namespace HangmanProjektArbete
         public static void StartMenu(string mainMenu)
         {
             Game game = new Game();
-            Game.life = 3;
+            Game.life = 5;
 
             Console.Clear();
             Console.WriteLine("      Welcome to Hangman!");

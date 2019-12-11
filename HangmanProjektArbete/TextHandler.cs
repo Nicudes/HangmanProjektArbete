@@ -29,7 +29,7 @@ namespace HangmanProjektArbete
                 Console.WriteLine("|                                               |                   ");
                 Console.WriteLine("|                                               |                   ");
                 Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("           " + Game.displayString + "              ");
+                Console.WriteLine("             " + Game.displayString + "              ");
 
 
                 Console.WriteLine("-------------------------------------------------                   ");
@@ -51,7 +51,7 @@ namespace HangmanProjektArbete
                 Console.WriteLine("|                     |                         |                   ");
                 Console.WriteLine("|             ________|_______                  |                   ");
                 Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("           " + Game.displayString + "              ");
+                Console.WriteLine("             " + Game.displayString + "              ");
                 Console.WriteLine("-------------------------------------------------                   ");
                 Console.WriteLine("                  Used letters                                      ");
 
@@ -71,7 +71,7 @@ namespace HangmanProjektArbete
                 Console.WriteLine("|                     |                         |                   ");
                 Console.WriteLine("|             ________|_______                  |                   ");
                 Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("           " + Game.displayString + "              ");
+                Console.WriteLine("             " + Game.displayString + "              ");
                 Console.WriteLine("-------------------------------------------------                   ");
                 Console.WriteLine("                  Used letters                                      ");
             }
@@ -91,7 +91,7 @@ namespace HangmanProjektArbete
                 Console.WriteLine("|                     |                         |                   ");
                 Console.WriteLine("|             ________|_______                  |                   ");
                 Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("           " + Game.displayString + "              ");
+                Console.WriteLine("             " + Game.displayString + "              ");
                 Console.WriteLine("-------------------------------------------------                   ");
                 Console.WriteLine("                  Used letters                                      ");
 
@@ -111,7 +111,7 @@ namespace HangmanProjektArbete
                 Console.WriteLine("|                     |                         |                   ");
                 Console.WriteLine("|             ________|_______                  |                   ");
                 Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("           " + Game.displayString + "              ");
+                Console.WriteLine("             " + Game.displayString + "              ");
                 Console.WriteLine("-------------------------------------------------                   ");
                 Console.WriteLine("                  Used letters                                      ");
             }
@@ -130,7 +130,7 @@ namespace HangmanProjektArbete
                 Console.WriteLine("|                     |                         |                   ");
                 Console.WriteLine("|             ________|_______                  |                   ");
                 Console.WriteLine("|                                               |                   ");
-                Console.WriteLine("           " + Game.displayString + "              ");
+                Console.WriteLine("             " + Game.displayString + "              ");
                 Console.WriteLine("-------------------------------------------------                   ");
                 Console.WriteLine("                  Used letters                                      ");
             }

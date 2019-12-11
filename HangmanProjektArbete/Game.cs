@@ -11,7 +11,7 @@ namespace HangmanProjektArbete
     public class Game
     {
         Random random = new Random(); //  använder oss av randomFunction
-        public static int life = 3;
+        public static int life = 5;
         public bool correctInput = false;
         public static string guessedLetter; // Guess är det vi skriver in för att gissa på ordet
         public static string correctWord = Words.WordsFromText().ToUpper(); // det rätta ordet som vi tar in från en txt-fil
@@ -57,18 +57,27 @@ namespace HangmanProjektArbete
 
         public bool InsertGuessToWord()
         {
-            if (correctWord.Contains(guessedLetter))
+            try
             {
-                for (int i = 0; i < correctWord.Length; i++)
+                if (correctWord.Contains(guessedLetter))
                 {
-                    if (correctWord[i] == guessedLetter[0])
+                    for (int i = 0; i < correctWord.Length; i++)
                     {
-                       displayString[i] = correctWord[i];
-                        revealedLetters++;
-                    }
-                }
+                        if (correctWord[i] == guessedLetter[0])
+                        {
 
-            } 
+                            displayString[i] = correctWord[i];
+                            revealedLetters++;
+                        }
+                    }
+
+                }
+            }
+            catch (Exception)
+            {
+
+             
+            }
            
             return true;
         }
@@ -88,7 +97,6 @@ namespace HangmanProjektArbete
         {
             if (correctInput == true && guessedLetter.Length == 1 && !usedLetters.Contains(guessedLetter))
             {
-                usedLetters.Add(guessedLetter);
 
                 if (correctWord.Contains(guessedLetter))
                 {
@@ -102,6 +110,7 @@ namespace HangmanProjektArbete
                     Console.WriteLine("                     Nope!");
                     life--;
                     Thread.Sleep(1000);
+                    usedLetters.Add(guessedLetter);
 
                 }
 
