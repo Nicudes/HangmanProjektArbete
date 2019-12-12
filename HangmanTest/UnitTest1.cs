@@ -3,27 +3,29 @@ using System.Collections.Generic;
 using System.Text;
 using NUnit.Framework;
 using HangmanProjektArbete;
+using System.IO;
 
 namespace HangmanTest
 {
     public class Tests
     {
+        
+
         [SetUp]
         public void Setup()
         {
         }
 
+      
+
         [Test]
-        public void Startmenu_InputLetter_CorrectLetterInput()
+        public void Startmenu_InputLetter_Prints1()
         {
-            Menu menu = new Menu();
-
-            string mainMenu = "1";
+            Menu.mainMenu = "1";
             string expected = "1";
+           
 
-            string result = mainMenu;
-
-            StringAssert.Contains(mainMenu, expected);
+            Assert.AreEqual(expected, Menu.mainMenu);
         }
 
         [Test]

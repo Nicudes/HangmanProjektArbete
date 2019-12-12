@@ -8,6 +8,7 @@ using System.Text.RegularExpressions;
 
 namespace HangmanProjektArbete
 {
+     
     public class Game
     {
         Random random = new Random(); //  använder oss av randomFunction
@@ -26,7 +27,7 @@ namespace HangmanProjektArbete
                 Console.Clear();
                 Console.WriteLine("YOU WON!");
                 Console.ReadKey();
-                Menu.StartMenu(mainMenu:"");
+                Menu.StartMenu();
 
                 return true;
             }
@@ -40,7 +41,7 @@ namespace HangmanProjektArbete
 
                 Console.WriteLine("DED!");
                 Console.ReadKey();
-                Menu.StartMenu(mainMenu: "");
+                Menu.StartMenu();
                 return true;
             }
             return false;

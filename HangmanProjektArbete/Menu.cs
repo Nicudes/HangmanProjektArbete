@@ -8,15 +8,17 @@ namespace HangmanProjektArbete
 {
     public class Menu
     {
+        public static string mainMenu;
+
         //Startmenu
-        public static void StartMenu(string mainMenu)
+        public static void StartMenu()
         {
             Game game = new Game();
             Game.life = 5;
 
             Console.Clear();
             Console.WriteLine("      Welcome to Hangman!");
-            Console.WriteLine("  made by Daniel, Huy & Jonatan! \n \n");
+            Console.WriteLine("  made by Daniel, Huy & Jonatan(RIP)! \n \n");
 
             Console.WriteLine("    ######   Meny   ##### \n");
             Console.WriteLine("    ##  1. Start game  ##");
