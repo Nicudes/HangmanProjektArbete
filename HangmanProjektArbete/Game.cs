@@ -8,14 +8,15 @@ using System.Text.RegularExpressions;
 
 namespace HangmanProjektArbete
 {
-     
     public class Game
     {
         Random random = new Random(); //  använder oss av randomFunction
         public static int life = 5;
-        public bool correctInput = false;
+        public bool isDead = false;
+        public bool isWin = false;
+        public static bool correctInput = false;
         public static string guessedLetter; // Guess är det vi skriver in för att gissa på ordet
-        public static string correctWord = Words.WordsFromText().ToUpper(); // det rätta ordet som vi tar in från en txt-fil
+        public static string correctWord = Words.WordsFromText(wordToCrack:"").ToUpper(); // det rätta ordet som vi tar in från en txt-fil
         public int revealedLetters = 0; // antalet bokstäver som skrivs ut 
         public static List<string> usedLetters = new List<string>();
         public static StringBuilder displayString;
@@ -27,12 +28,12 @@ namespace HangmanProjektArbete
                 Console.Clear();
                 Console.WriteLine("YOU WON!");
                 Console.ReadKey();
-                Menu.StartMenu();
+                Menu.StartMenu(mainMenu:"");
 
-                return true;
+                return isWin = true;
             }
 
-            return false;
+            return isWin = false;
         }
         public bool checkIfDead()
         {
@@ -41,17 +42,17 @@ namespace HangmanProjektArbete
 
                 Console.WriteLine("DED!");
                 Console.ReadKey();
-                Menu.StartMenu();
-                return true;
+                Menu.StartMenu(mainMenu: "");
+                return isDead = true;
             }
-            return false;
+            return isDead = false;
         }
 
         public void wordDisplayHandle()
         {
             displayString = new StringBuilder(correctWord.Length); // Stringbuilder visar antalet bokstäver som finns med som "_" och skriver ut de bokstäver som gissats rätt
            
-            Words.WordsFromText();
+            Words.WordsFromText(wordToCrack:"");
             for (int i = 0; i < correctWord.Length; i++)
                 displayString.Append("_");
         }
@@ -83,7 +84,7 @@ namespace HangmanProjektArbete
             return true;
         }
 
-        public bool ValidInput()
+        public static bool ValidInput(string guessedLetter)
         {
         
             if (correctInput = Regex.IsMatch(guessedLetter, @"^[a-zA-Z]+$"))
@@ -129,7 +130,6 @@ namespace HangmanProjektArbete
         public void GameStart()
         {
             wordDisplayHandle();
-
             do
             {
 
@@ -137,7 +137,7 @@ namespace HangmanProjektArbete
                 checkIfWin();
                 TextHandler.hangedMan();
                 InsertGuessToWord();
-                ValidInput();
+                ValidInput(guessedLetter);
                 validGuess();
 
 

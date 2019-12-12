@@ -16,7 +16,7 @@ namespace HangmanProjektArbete
             Console.Clear();
             if (Game.life == 5)
             {
-                Console.WriteLine($"   The Hangman Game    HP: 	♥♥♥♥♥                         ");
+                Console.WriteLine($"   The Hangman Game    HP: 	♥♥♥♥♥  {Game.life}                       ");
                 Console.WriteLine("-------------------------------------------------                   ");
                 Console.WriteLine("|                                               |                   ");
                 Console.WriteLine("|                                               |                   ");
@@ -38,7 +38,7 @@ namespace HangmanProjektArbete
             }
             if (Game.life == 4)
             {
-                Console.WriteLine($"   The Hangman Game    HP: 	♥♥♥♥                         ");
+                Console.WriteLine($"   The Hangman Game    HP: 	♥♥♥♥   {Game.life}                        ");
                 Console.WriteLine("-------------------------------------------------                   ");
                 Console.WriteLine("|                                               |                   ");
                 Console.WriteLine("|                                               |                   ");
@@ -58,7 +58,7 @@ namespace HangmanProjektArbete
             }
             if (Game.life == 3)
             {
-                Console.WriteLine($"   The Hangman Game    HP: 	♥♥♥                         ");
+                Console.WriteLine($"   The Hangman Game    HP: 	♥♥♥    {Game.life}                  ");
                 Console.WriteLine("-------------------------------------------------                   ");
                 Console.WriteLine("|                                               |                   ");
                 Console.WriteLine("|                                               |                   ");
@@ -77,7 +77,7 @@ namespace HangmanProjektArbete
             }
             if (Game.life == 2)
             {
-                Console.WriteLine($"   The Hangman Game    HP: 	♥♥                         ");
+                Console.WriteLine($"   The Hangman Game    HP: 	♥♥     {Game.life}                    ");
 
                 Console.WriteLine("-------------------------------------------------                   ");
                 Console.WriteLine("|                                               |                   ");
@@ -98,7 +98,7 @@ namespace HangmanProjektArbete
             }
             if (Game.life == 1)
             {
-                Console.WriteLine($"   The Hangman Game    HP: 	♥                         ");
+                Console.WriteLine($"   The Hangman Game    HP: 	♥      {Game.life}                  ");
                 Console.WriteLine("-------------------------------------------------                   ");
                 Console.WriteLine("|                                               |                   ");
                 Console.WriteLine("|                                               |                   ");
@@ -117,7 +117,7 @@ namespace HangmanProjektArbete
             }
             if (Game.life == 0)
             {
-                Console.WriteLine($"   The Hangman Game    HP: 	                         ");
+                Console.WriteLine($"   The Hangman Game    HP: 	     {Game.life}               ");
                 Console.WriteLine("-------------------------------------------------                   ");
                 Console.WriteLine("|                 RIP                           |                   ");
                 Console.WriteLine("|            U DED OK?                          |                   ");

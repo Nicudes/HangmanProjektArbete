@@ -10,7 +10,7 @@ namespace HangmanProjektArbete
     {
         static void Main(string[] args)
         {
-            Menu.StartMenu();
+            Menu.StartMenu(mainMenu: "");
         }
     }
 }

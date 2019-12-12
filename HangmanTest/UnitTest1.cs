@@ -3,30 +3,42 @@ using System.Collections.Generic;
 using System.Text;
 using NUnit.Framework;
 using HangmanProjektArbete;
-using System.IO;
+using System.IO; 
 
 namespace HangmanTest
 {
     public class Tests
     {
-        
-
         [SetUp]
         public void Setup()
         {
         }
 
-      
+        [Test]
+        public void TryToMockME()
+        {
+
+
+            //var ffs = new FakeMockStuff();
+            Words wordCrack = new Words();
+            wordCrack.fileSystem = ffs; 
+        }
+
 
         [Test]
-        public void Startmenu_InputLetter_Prints1()
+        public void ValidInput_UserPrintsNumber_ReturnFalse()
         {
-            Menu.mainMenu = "1";
-            string expected = "1";
-           
-
-            Assert.AreEqual(expected, Menu.mainMenu);
+            Game game = new Game();
+            string[] guessNumber = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
+            
+            for (int i = 0; i < guessNumber.Length; i++)
+            {
+                string guessedLetter = guessNumber[i];
+                var result = Game.ValidInput(guessedLetter);
+                Assert.False(result);
+            }
         }
+
 
         [Test]
         public void Startmenu_InputLetter_IncorrectSymbolInput()
